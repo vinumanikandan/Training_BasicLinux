@@ -1,4 +1,5 @@
-# Training_BasicLinux
+# Module 1 : Basic Linux
+
 Training_Linux
 
 ## Features of Linux
