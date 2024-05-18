@@ -15,8 +15,7 @@ Training_Linux
 
 
 ## Linux Flavours
-
-[Project Screenshot](https://raw.githubusercontent.com/vinumanikandan/Traininh_BasicLinux/main/images/Linux_Flavours.png)
+![Project Screenshot](images/Linux_Flavours.png)
 
 
 
