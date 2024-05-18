@@ -15,6 +15,11 @@ Training_Linux
 
 
 ## Linux Flavours
+
+[Project Screenshot](images/Linux_Flavours.png)
+
+
+
 <details>
   <summary>Click to expand!</summary>
   
