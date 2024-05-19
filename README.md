@@ -93,7 +93,33 @@ Host-specific system-wide configuration files. Contains configuration files requ
 - **/home** :
 
  Users’ home directories, containing saved files, personal settings, etc.
- 
+
+
+## Command line interface
+
+Command line interface existed before the Graphical user interfaces (GUI) due to computer power/technology. Still the command line survived in all operating systems and is still useful.
+
+
+**Terminal Emulator**
+
+A terminal emulator is a program that allows the use of the terminal in a graphical environment. As most people use an OS with a graphical user interface (GUI) for their day-to-day computer needs, the use of a terminal emulator is a necessity for most Linux server users.
+
+Here are some free, commonly-used terminal emulators by operating system:
+
+- **Mac OS X**: Terminal (default), iTerm 2
+- **Windows**: ConEmu, Windows Terminal, PuTTy
+- **Linux**: Gnome Terminal, Konsole, XTerm
+
+![Terminal Screenshot](images/Terminal.png)
+
+##  Shell
+
+In a Linux system, the shell is a command-line interface that interprets a user’s commands and script files, and tells the server’s operating system what to do with them. There are several shells that are widely used, such as the Bourne-Again shell (bash) and Z shell (zsh). 
+
+A shell is a special user program that provides an interface to the user to use operating system services. Shell accepts human-readable commands from the user and converts them into something which the kernel can understand. It is a command language interpreter that executes commands read from input devices such as keyboards or from files. The shell gets started when the user logs in or starts the terminal. 
+
+By default terminal open your home directory.
+
 
 **Basic Linux Terminal Commands**
 
@@ -137,6 +163,33 @@ Host-specific system-wide configuration files. Contains configuration files requ
 |top -c |Display the processes in terminal|
 |echo |Display active processes on the terminal|
 |df |Check the details of the file system|
+
+
+***Note : all system commands are in lower case and is case sensitive***
+
+
+## TERMINAL : Users and access rights
+
+The ls command is commonly used to identify the files and directories in the working directory. This command is one of the many often-used Linux commands that you should know.
+
+This command can be used by itself without any arguments and it will provide us the output with all the details about the files and the directories in the current working directory. There is a lot of flexibility offered by this command in terms of displaying data in the output. Check the below image for the output.
+
+```
+ls -lth
+```
+
+![ls Screenshot](images/ls.png)
+
+- **-l** long list format, including access rights
+- **-h** print file and directory sizes in human readable format
+- **-t** sort by modification date
+
+For more option try
+
+```
+man ls
+```
+
 
 <details>
   <summary>Click to expand!</summary>
