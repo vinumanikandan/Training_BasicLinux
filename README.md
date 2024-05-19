@@ -9,6 +9,17 @@ OS (**Operating System**) is a fully integrated set of specialized programs that
 ![OS Screenshot](images/Different_OS.png)
 
 
+## Different types of Systems 
+
+ **Servers & Desktop**
+![System Screenshot](images/Server_vs_Desktop.png)
+
+**HPC** (High Performance Clusters)
+
+HPC is basically a collection of multiple servers connected together along with a job schedular for workload managment.
+
+![System Screenshot](images/HPC.png)
+
 ## What is Linux OS ?
 Linux (**Like Unix**) based on unix OS and is built upon the Linux Kernel. 
 
@@ -26,21 +37,63 @@ The Linux Kernel is the brain of the operating system because it manages how the
 - **Networking**: The network is essential for remote access
 - **Various user interfaces**: Both text-only and graphical interfaces are available
 
-
 ## Linux Flavours
 ![Project Screenshot](images/Linux_Flavours.png)
 
-## Different types of Systems 
+## File System Structure
 
- **Servers & Desktop**
-![System Screenshot](images/Server_vs_Desktop.png)
+In a nutshell Linux file system structure can be defined as directories(Folders) within Directories
 
-**HPC** (High Performance Clusters)
+![FHS Screenshot](images/FHS.png)
 
-HPC is basically a collection of multiple servers connected together along with a job schedular for workload managment.
 
-![System Screenshot](images/HPC.png)
+**Common top-level directories :** 
 
+|Directories|Description|
+|:---:|:---:|
+| /bin| binary or executable programs|
+|/etc|system configuration files|
+|/home|home directory. It is the default current directory|
+|/opt|optional or third-party software|
+|/tmp|temporary space, typically cleared on reboot|
+|/usr| User related programs|
+|/var |log files|
+
+**other directories in the Linux system :**
+|Directories|Description|
+|:---:|:---:|
+|/boot|It contains all the boot-related information files and folders such as conf, grub, etc|
+|/dev|It is the location of the device files such as dev/sda1, dev/sda2, etc|
+|/lib|It contains kernel modules and a shared library|
+|/lost+found|It is used to find recovered bits of corrupted files|
+|/media|It contains subdirectories where removal media devices are inserted|
+|/mnt|It contains temporary mount directories for mounting the file system|
+|/proc|It is a virtual and pseudo-file system to contains info about the running processes with a specific process ID or PID|
+|/run|It stores volatile runtime data|
+|/sbin|binary executable programs for an administrator|
+|/srv |It contains server-specific and server-related files|
+|/sys|It is a virtual file system for modern Linux distributions to store and allows modification of the devices connected to the system.|
+
+
+Let look into few directories in the FHS 
+
+ - **/ (Root)**: 
+
+Root folder (**/**) is the primary hierarchy directory also known as directory of the entire file system hierarchy. Every single file and directory start from the root directory. The only root user has the right to write under this directory.
+
+- **/bin** : 
+
+Essential command binaries that need to be available in single-user mode; for all users, e.g., cat, ls, cp. 
+
+
+- **/etc** :
+
+Host-specific system-wide configuration files. Contains configuration files required by all programs aomg with the startup/shutdown shell scripts used for each of the  programs.
+
+- **/home** :
+
+ Users’ home directories, containing saved files, personal settings, etc.
+ 
 
 **Basic Linux Terminal Commands**
 
