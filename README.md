@@ -95,6 +95,8 @@ Host-specific system-wide configuration files. Contains configuration files requ
  Users’ home directories, containing saved files, personal settings, etc.
 
 
+
+
 ## Command line interface
 
 Command line interface existed before the Graphical user interfaces (GUI) due to computer power/technology. Still the command line survived in all operating systems and is still useful.
@@ -121,6 +123,9 @@ A shell is a special user program that provides an interface to the user to use 
 By default terminal open your home directory.
 
 
+
+
+- 
 **Basic Linux Terminal Commands**
 
 |Linux Commands|Functions|example|
@@ -168,7 +173,7 @@ By default terminal open your home directory.
 ***Note : all system commands are in lower case and is case sensitive***
 
 
-## TERMINAL : Users and access rights
+
 
 The ls command is commonly used to identify the files and directories in the working directory. This command is one of the many often-used Linux commands that you should know.
 
@@ -189,6 +194,42 @@ For more option try
 ```
 man ls
 ```
+
+## Users and access rights
+
+**Root**
+- create and delete user accounts
+- modify access rights
+- install and remove programs system wide
+
+**Users**
+
+- Install and remove programs (only for the user)
+
+**Permissions for the data** 
+For each folder and files there are 3 types of permission
+
+- **Read**: Display the file
+- **Write**: Display and modify the content of the file
+- **Execute**: Run a file ( only for scripts and compiled programs)
+
+
+Every file and directory is protected. A set of permissions determines who can access a certain file and what kind of access is allowed.
+
+![ls Screenshot](images/Permissions.png)
+
+There are three level of users: 
+
+- User
+- usergroup
+- others
+
+There are three level of Permision: 
+|permission|score|
+|:---:|:---:|
+|Read| 4|
+|Write|2|
+|Execute|1|
 
 
 <details>
