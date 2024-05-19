@@ -6,7 +6,8 @@ Training_Linux
 
 OS (**Operating System**) is a fully integrated set of specialized programs that manages, controls and monitors the execution of all the programs/resources of the computer and acts an interface between the software and the computer hardware.
 
-![OS Screenshot](images/Different_OS.png]
+![OS Screenshot](images/Different_OS.png)
+
 
 ## What is Linux OS ?
 Linux (**Like Unix**) based on unix OS and is built upon the Linux Kernel. 
