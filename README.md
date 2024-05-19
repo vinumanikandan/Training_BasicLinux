@@ -60,6 +60,7 @@ In a nutshell Linux file system structure can be defined as directories(Folders)
 |/var |log files|
 
 **other directories in the Linux system :**
+
 |Directories|Description|
 |:---:|:---:|
 |/boot|It contains all the boot-related information files and folders such as conf, grub, etc|
