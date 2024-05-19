@@ -2,6 +2,18 @@
 
 Training_Linux
 
+## What is OS
+
+OS (**Operating System**) is a fully integrated set of specialized programs that manages, controls and monitors the execution of all the programs/resources of the computer and acts an interface between the software and the computer hardware.
+
+![OS Screenshot](images/Different_OS.png]
+
+## What is Linux OS ?
+Linux (**Like Unix**) based on unix OS and is built upon the Linux Kernel. 
+
+## What is kernel ?
+The Linux Kernel is the brain of the operating system because it manages how the computer interacts with its hardware and resources to make it works smoothly and efficiently
+
 ## Features of Linux
 
 - **Stable**: One of the most stable OS in the world
@@ -17,20 +29,16 @@ Training_Linux
 ## Linux Flavours
 ![Project Screenshot](images/Linux_Flavours.png)
 
+## Different types of Systems 
 
+ **Servers & Desktop**
+![System Screenshot](images/Server_vs_Desktop.png)
 
-<details>
-  <summary>Click to expand!</summary>
-  
-  ### Hidden Section
+**HPC** (High Performance Clusters)
 
-  Here is the content that will be hidden by default. Click on the "Click to expand!" text above to see this content.
+HPC is basically a collection of multiple servers connected together along with a job schedular for workload managment.
 
-  - Hidden item 1
-  - Hidden item 2
-  - Hidden item 3
-
-</details>
+![System Screenshot](images/HPC.png)
 
 
 **Basic Linux Terminal Commands**
@@ -76,5 +84,16 @@ Training_Linux
 |echo |Display active processes on the terminal|
 |df |Check the details of the file system|
 
+<details>
+  <summary>Click to expand!</summary>
+  
+  ### Hidden Section
 
+  Here is the content that will be hidden by default. Click on the "Click to expand!" text above to see this content.
+
+  - Hidden item 1
+  - Hidden item 2
+  - Hidden item 3
+
+</details>
 
