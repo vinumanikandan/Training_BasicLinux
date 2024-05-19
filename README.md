@@ -360,4 +360,15 @@ mv Linux myProject
 
 </details>
 
+## Downloading files over intranet
+
+ wget command in the Linux command line allows you to download files from the internet. It runs in the background and does not interfere with other processes. 
+
+ ```
+wget -c “https://ftp.ensembl.org/pub/release-112/gtf/homo_sapiens/Homo_sapiens.GRCh38.112.gtf.gz”
+
+In mac :
+curl -o Homo_sapiens.GRCh38.112.gtf.gz https://ftp.ensembl.org/pub/release-112/gtf/homo_sapiens/Homo_sapiens.GRCh38.112.gtf.gz
+```
+
 
