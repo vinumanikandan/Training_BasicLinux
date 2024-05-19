@@ -226,6 +226,7 @@ There are three level of users:
 - others
 
 There are three level of Permision: 
+
 |permission|score|
 |:---:|:---:|
 |Read| 4|
@@ -233,16 +234,130 @@ There are three level of Permision:
 |Execute|1|
 
 
+##  Create Folders
+
+This mkdir command allows you to create fresh directories in the terminal itself. The default syntax is mkdir <directory name> and the new directory will be created.
+
+```
+mkdir FOLDER_NAME
+```
+
+Things to remember :
+
+i) Avoid having spaces in filenames/Folder names; Instead use “-“ “_”
+
+ii)Avoid starting files/folder names starting with digits (Sometimes)
+
+iii) Files/Folder names are case-sensitive
+
+# TASK - 1 :
+
+Create a folder  called  “My Project” and find what type of permission does it have:? 
+
+
 <details>
-  <summary>Click to expand!</summary>
+  <summary>Task 1 Answer</summary>
   
-  ### Hidden Section
+```
+mkdir My_Project
 
-  Here is the content that will be hidden by default. Click on the "Click to expand!" text above to see this content.
-
-  - Hidden item 1
-  - Hidden item 2
-  - Hidden item 3
+ls -lth
+```
 
 </details>
+
+## Changing permission
+
+**chmod** : is used to change permission 
+
+|permission|score|
+|:---:|:---:|
+|Read| 4|
+|Write|2|
+|Execute|1|
+
+Provide full permission to the folder:
+
+```
+chmod 777 My_Project
+```
+
+# Task - 2 :
+
+Give only read permission to others and read &write permission to the user group and read ,write and execute permission to user(you) for the folder My_Project” 
+
+<details>
+  <summary>Task 2 Answer</summary>
+  
+```
+chmod 764  My_Project
+
+ls -lth
+```
+
+</details>
+
+## Traversing  through Directories
+
+**cd** : change directory
+
+
+|Description|Command|
+|:---:|:---:|
+|Go the to the folder|cd  My_Project|
+|Go the to the previous location|cd  ../|
+|remove/delete directory|rmdir  My_Project|
+|rename  folder|mv  My_Project My_Project1|
+|move folder to new location|mv  My_Project1 ../My_Project|
+
+
+
+# Task - 3  :
+
+- Create a Folder called Linux and inside Linux create another folder called DATA
+- Give full permission for the folder DATA
+- rename the folder “Linux” to “myProject”
+- Go inside folder DATA and list all the files including hidden files
+- remove/delete folder “Linux”
+
+
+<details>
+  <summary>Task 3 Answer</summary>
+
+ - Create a Folder called Linux and inside Linux create another folder called DATA
+
+```
+mkdir Linux
+cd  Linux
+mkdir DATA
+```
+**or**
+
+```
+mkdir-p  Linux/DATA
+```
+
+- Give full permission for the folder DATA
+  
+```
+chmod 777 Linux/DATA
+```
+
+- rename the folder “Linux” to “myProject”
+
+```
+cd  ../
+mv Linux myProject
+```
+**or**
+
+```
+cd  ../
+mv Linux myProject
+```
+
+
+
+</details>
+
 
