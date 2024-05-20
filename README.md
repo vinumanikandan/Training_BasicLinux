@@ -637,3 +637,157 @@ Display lines from 30 to 40 and write the same to new file called “selected.tx
 sed -n '30,40p' Data.txt 
 sed -n '30,40p' Data.txt > selected.txt
 ```
+</details>
+
+## 14 grep
+
+The ‘grep’ command is a powerful way of searching words or patterns in files. There are several options available;
+
+**-c** print the number of resulting lines
+**-i** case-insensitive search
+**-v** print lines that not match the pattern
+**-n** add line number in front of the result
+**-r/-R** search all files recursively under each directory
+
+***More option on grep “man grep”***
+
+```
+grep “pattern” File
+```
+
+prints all the lines with word exonic 
+
+```
+grep “miRNA_gene” Data.txt
+
+```
+prints number of times the word exonic is found in file
+
+```
+grep -c “miRNA_gene” Data.txt
+```
+
+
+# Task - 7  :
+
+- Find all the lines which has “snRNA_gene” in the downloaded file and write into new file called “snRNA_gene.txt”
+  
+- Find number of times word “pseudogene” is found in the data
+  
+- Display first 3 lines from snRNA_gene.txt
+
+
+<details>
+ 
+  <summary>Task 7 Answer</summary>
+
+1) Find all the lines which has “snRNA_gene” in the downloaded file and write into new file called “snRNA_gene.txt”
+   
+```
+             grep “snRNA_gene” Data.txt >snRNA_gene.txt
+```
+
+2) Find number of times word “pseudogene” is found in the data
+
+```
+            grep -ic “pseudogene” Data.txt
+```
+
+3) Display first 3 lines from synonymous.txt 
+
+```
+           head -n 3 snRNA_gene.txtxt > selected.txt
+```
+</details>
+
+
+# Task - 8  :
+
+- Find all the lines which has “snoRNA” and  “lincRNA” in the downloaded file and write into new file called “New.txt”
+  
+- Download “http://plasmodb.org/common/downloads/release-28/Pfalciparum3D7/fasta/data/PlasmoDB-28_Pfalciparum3D7_Genome.fasta” into folder YIL/PF3D7. Find number of chromosomes?
+  
+- Find number of Sequences having  motif “AAAATGTTATATATATATATATATAT"
+
+
+<details>
+ 
+  <summary>Task 8 Answer</summary>
+
+1) Find all the lines which has “snoRNA” and  “lincRNA” in the downloaded file and write into new file called “New.txt”
+
+   
+```
+
+grep “snoRNA” Data.txt >snoRNA.txt
+
+grep “lincRNA” Data.txt >lincRNA.txt
+
+cat snoRNA.txt lincRNA.txt >New.tx
+
+```
+
+2) Download “http://plasmodb.org/common/downloads/release-28/Pfalciparum3D7/fasta/data/PlasmoDB-28_Pfalciparum3D7_Genome.fasta” into folder Linux3/PF3D7. Find number of chromosomes?
+
+Step1 : Download
+
+```
+curl -o PF3D7.fasta http://plasmodb.org/common/downloads/release-28/Pfalciparum3D7/fasta/data/PlasmoDB-28_Pfalciparum3D7_Genome.fasta
+```
+
+Step 2: Create folder
+
+```
+mkdir -p Linux3/PF3D7
+```
+
+Step 3 : mv
+
+```
+mv PF3D7.fasta Linux3/PF3D7
+```
+
+Step 4 : Find number of Chromosomes
+
+```
+grep -c PF3D7.fasta
+```
+
+
+3) Find number of Sequences having  motif “AAAATGTTATATATATATATATATAT"
+
+```
+grep -ic "AAAATGTTATATATATATATATATAT" PlasmoDB-28_Pfalciparum3D7_Genome.fasta 
+
+```
+
+</details>
+
+## 15 Short keys
+
+- double press tab: for autofill
+  
+- cd / cd ~ : will move you to your home directory
+  
+- Use “|” pipe to make multiple commands
+
+## 16 Other UseFul Commands
+
+- awk
+  
+- sort
+  
+- uniq
+
+
+---
+
+# More Reading 
+
+This module is heavly inspired from different publicially avaiable slides and websites
+
+- SW Carpentry : https://swcarpentry.github.io/shell-novice/
+
+- SIB : Bioinformatics Course :  https://www.bits.vib.be/training/79-bits/training/124-linux-for-bioinformatics
+  
+- geeksforgeeks.org: https://www.geeksforgeeks.org/
