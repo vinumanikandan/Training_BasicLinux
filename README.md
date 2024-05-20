@@ -1,6 +1,11 @@
 # Module 1 : Basic Linux
 
-Training_Linux
+This hands on program is tailored to provide participants insight into basic commands in linux. 
+
+## Device(s) that attendees should bring to the workshop (e.g., laptop, smartphone, etc.):
+Laptop.
+
+---
 
 ## What is OS
 
