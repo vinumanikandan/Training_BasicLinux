@@ -585,12 +585,10 @@ To View big data files use the for
 ## 10:  shows first few lines of the file
 
 ```
-
 more filename
-
 ```
   
- ## 11 shows last few lines of the file
+## 11 shows last few lines of the file
 
 ```
  tail filename
