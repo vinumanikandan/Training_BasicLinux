@@ -358,12 +358,15 @@ mv Linux myProject
 
 ## 6. Downloading files over internet
 
- wget command in the Linux command line allows you to download files from the internet. It runs in the background and does not interfere with other processes. 
+wget command in the Linux command line allows you to download files over the internet. 
 
- ```
+```
 wget -c “https://ftp.ensembl.org/pub/release-112/gtf/homo_sapiens/Homo_sapiens.GRCh38.112.gtf.gz”
 
+```
 In mac :
+
+```
 curl -o Homo_sapiens.GRCh38.112.gtf.gz https://ftp.ensembl.org/pub/release-112/gtf/homo_sapiens/Homo_sapiens.GRCh38.112.gtf.gz
 ```
 
@@ -435,7 +438,7 @@ tar -zxvf File File_Folder_Name.tar.gz
 - **-f** : File name
 - **-z** : unCompress with gzip
   
-More info on other options can be found using command “man zip” | “man tar” | “man unzip”
+**More info on other options can be found using command “man zip” | “man tar” | “man unzip”**
 
 
 # Task - 4  :
@@ -453,21 +456,11 @@ More info on other options can be found using command “man zip” | “man tar
 
 </details>
 
+
 ## 9. Copying Files/Folders
 
 
-**cp**    : copy-paste a file from a given location to another file
-
-**mv**    : move(cut) a given file/folder from one location to another. This command is also used to rename a folder name
-
-**rsync** : sync a file or folder from one location to another (like cp command but much faster. Unlike cp command this rsync will copy only new/updated files to new locations.) 
-
-**ln -s** : Create symbolic links. (Time/memory saving commands)
-
-
-**cp command**
-
-cp : copy-paste a file/folder  from a given location to another file
+**a) cp**    : copy-paste a file from a given location to another file
 
 copy a single file
 
@@ -483,5 +476,164 @@ cp -R folder name /path/to/new/location
 ```
 - **-R** :Copies the directory and the entire contents
 
-**More option on cp  “man cp”**
+***More option on cp  “man cp”***
 
+
+**b) mv**    : move(cut) a given file/folder from one location to another. This command is also used to rename a folder name
+
+relocating the file/folder
+
+```
+mv file/Folder /path/to/new/location
+
+```
+
+renaming the file/folder
+
+```
+mv file/Folder NEWname
+```
+
+***More option on mv  “man mv”***
+
+
+**c) rsync** : sync a file or folder from one location to another (like cp command but much faster. Unlike cp command this rsync will copy only new/updated files to new locations.) 
+
+```
+rsync file/Folder /path/to/new/location
+
+```
+
+***More option on rsync  “man rsync”***
+
+**d) ln -s** : Create symbolic links. (Time/memory saving commands)
+
+```
+
+ln -s file /path/to/new/location
+
+```
+
+***More option on ln  “man ln”***
+
+
+
+# Task - 5  :
+Download the data “https://ftp.ensembl.org/pub/release-84/gff3/homo_sapiens/Homo_sapiens.GRCh38.84.gff3.gz" and and move the downloaded file into folder a new folder Linux2/DATA. Rename the file to “Data” and uncompress the file.
+
+
+
+<details>
+  <summary>Task 5 Answer</summary>
+ 
+1) Download the data “https://ftp.ensembl.org/pub/release-84/gff3/homo_sapiens/Homo_sapiens.GRCh38.84.gff3.gz
+
+```
+curl -o Homo_sapiens.GRCh38.84.gff3.gz https://ftp.ensembl.org/pub/release-84/gff3/homo_sapiens/Homo_sapiens.GRCh38.84.gff3.gz
+```
+or
+
+```
+wget https://ftp.ensembl.org/pub/release-84/gff3/homo_sapiens/Homo_sapiens.GRCh38.84.gff3.gz
+
+```
+2) new folder Linux/DATA
+
+```
+
+mkdir -p Linux2/DATA
+
+```
+3)  move the downloaded file into folder Linux2/DATA
+
+```
+mv Homo_sapiens.GRCh38.84.gff3.gz Linux2/DATA
+
+```
+4) Rename the file to “Data” and uncompress the file
+
+```
+cd Linux2/DATA
+mv Homo_sapiens.GRCh38.84.gff3.gz Data.txt.gz
+```
+
+5) Uncompress
+
+```
+gunzip Data.txt.gz
+
+```
+
+</details>
+
+---
+
+# File operations 
+
+There are different methods to view your file. 
+
+- View content of the file 
+- edit you file (text editors such as vi.vim,nano)
+- 
+To View big data files use the for
+
+## 10:  shows first few lines of the file
+
+```
+
+more filename
+
+```
+  
+ ## 11 shows last few lines of the file
+
+```
+ tail filename
+
+```
+   
+## 12 shows first # lines(10) of the file
+  
+ ```
+  head -n 10 filename
+
+  ```
+
+## 13 show specific line(s) or number of lines
+ 
+   - print 2nd line :
+     ```
+      sed -n '2p'  file.txt
+    ```
+    
+   - print line 10 up to line 33 :
+     ```
+     sed -n '10,33p' file.txt
+     ```
+     
+   - print 1st and 3th line :
+     ```
+     sed -n '1p;3p' file.txt
+     ```
+     
+# Task - 6  :
+
+Display first 10 lines from Data.txt
+
+Display lines from 30 to 40 and write the same to new file called “selected.txt”
+
+
+<details>
+  <summary>Task 6 Answer</summary>
+
+Display first 10 lines from Data.txt
+```
+head -n 10  Data.txt
+```
+
+Display lines from 30 to 40 and write the same to new file called “selected.txt”
+
+```
+sed -n '30,40p' Data.txt 
+sed -n '30,40p' Data.txt > selected.txt
+```
