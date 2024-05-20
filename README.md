@@ -121,12 +121,8 @@ In a Linux system, the shell is a command-line interface that interprets a user�
 
 A shell is a special user program that provides an interface to the user to use operating system services. Shell accepts human-readable commands from the user and converts them into something which the kernel can understand. It is a command language interpreter that executes commands read from input devices such as keyboards or from files. The shell gets started when the user logs in or starts the terminal. 
 
-By default terminal open your home directory.
+By default terminal open user home directory location.
 
-
-
-
-- 
 **Basic Linux Terminal Commands**
 
 |Linux Commands|Functions|example|
@@ -171,10 +167,13 @@ By default terminal open your home directory.
 |df |Check the details of the file system|
 
 
-***Note : all system commands are in lower case and is case sensitive***
+**Note : all system commands are in lower case and is case sensitive**
 
+---
 
+# Let's go in depth some of the most commonly used linux commands 
 
+## 1. listing file in a directory
 
 The ls command is commonly used to identify the files and directories in the working directory. This command is one of the many often-used Linux commands that you should know.
 
@@ -196,7 +195,7 @@ For more option try
 man ls
 ```
 
-## Users and access rights
+## 2. Users and access rights
 
 **Root**
 - create and delete user accounts
@@ -234,7 +233,7 @@ There are three level of Permision:
 |Execute|1|
 
 
-##  Create Folders
+## 3. Create Folders
 
 This mkdir command allows you to create fresh directories in the terminal itself. The default syntax is mkdir <directory name> and the new directory will be created.
 
@@ -266,7 +265,7 @@ ls -lth
 
 </details>
 
-## Changing permission
+## 4. Changing permission
 
 **chmod** : is used to change permission 
 
@@ -297,7 +296,7 @@ ls -lth
 
 </details>
 
-## Traversing  through Directories
+## 5. Traversing  through Directories
 
 **cd** : change directory
 
@@ -352,15 +351,12 @@ mv Linux myProject
 **or**
 
 ```
-cd  ../
 mv Linux myProject
 ```
 
-
-
 </details>
 
-## Downloading files over intranet
+## 6. Downloading files over internet
 
  wget command in the Linux command line allows you to download files from the internet. It runs in the background and does not interfere with other processes. 
 
@@ -371,4 +367,121 @@ In mac :
 curl -o Homo_sapiens.GRCh38.112.gtf.gz https://ftp.ensembl.org/pub/release-112/gtf/homo_sapiens/Homo_sapiens.GRCh38.112.gtf.gz
 ```
 
+## 7. Compressing Files/Folders
+
+There are many tools that can compress you data (files/Folder) into a single file for efficient storage and transfer files as they reduce the size of the file drastically. This is an useful method for archieving the data. 
+
+There are many tools that can be used such as
+
+- zip
+- tar
+
+**Command used for zip**:
+
+``
+zip File/folderName
+``
+
+**Command used for tar**
+
+For creating a normal tar file
+```
+tar -cvf File File_Folder_Name.tar File_FOLDER_Name
+```
+
+for creating tar.gz file
+```
+tar -zcvf File File_Folder_Name.tar.gz File_FOLDER_Name
+```
+
+- **-c** : Compress/Archieve
+- **-v** :verbos
+- **-f** : File name
+- **-z** : Compress with gzip
+
+**tar -zcvf  is same as tar -z -c -v -f**
+
+
+## 8. Uncompressing Files/Folders
+
+There are many tools that can be used such as
+
+- guzip
+- untar
+
+**Command used for unzip**:
+
+```
+gunzip File_Folder_Name.zip
+```
+
+
+**Command used for tar**
+
+For untaring a normal tar file
+
+```
+tar -xvf File File_Folder_Name.tar
+```
+
+For untaring a normal tar.gz file
+
+```
+tar -zxvf File File_Folder_Name.tar.gz
+```
+
+- **-x** : extract
+- **-v** :verbos (Display the progress)
+- **-f** : File name
+- **-z** : unCompress with gzip
+  
+More info on other options can be found using command “man zip” | “man tar” | “man unzip”
+
+
+# Task - 4  :
+ Uncompress the last downloaded file
+
+ 
+<details>
+  <summary>Task 4 Answer</summary>
+ 
+```
+
+ gunzip Homo_sapiens.GRCh38.112.gtf.gz
+
+```
+
+</details>
+
+## 9. Copying Files/Folders
+
+
+**cp**    : copy-paste a file from a given location to another file
+
+**mv**    : move(cut) a given file/folder from one location to another. This command is also used to rename a folder name
+
+**rsync** : sync a file or folder from one location to another (like cp command but much faster. Unlike cp command this rsync will copy only new/updated files to new locations.) 
+
+**ln -s** : Create symbolic links. (Time/memory saving commands)
+
+
+**cp command**
+
+cp : copy-paste a file/folder  from a given location to another file
+
+copy a single file
+
+```
+cp filename /path/to/new/location
+```
+
+if you need to copy a folder
+
+```
+cp -R folder name /path/to/new/location
+
+```
+- **-R** :Copies the directory and the entire contents
+
+**More option on cp  “man cp”**
 
