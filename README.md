@@ -7,7 +7,6 @@ This hands on program is tailored to provide participants with insight into basi
 
 Laptop with linux/mac-os or access to a linux system.
 
----
 
 ## What is OS
 
