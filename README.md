@@ -1,9 +1,11 @@
 # Module 1 : Basic Linux
 
-This hands on program is tailored to provide participants insight into basic commands in linux. 
+This hands on program is tailored to provide participants with insight into basic commands in linux. This page is highly inspired and uses information from wide number of resources available online
 
-## Device(s) that attendees should bring to the workshop (e.g., laptop, smartphone, etc.):
-Laptop.
+
+## Device(s) that attendees should bring to the program (e.g., laptop, smartphone, etc.):
+
+Laptop with linux/mac-os or access to a linux system.
 
 ---
 
@@ -766,7 +768,86 @@ grep -ic "AAAATGTTATATATATATATATATAT" PlasmoDB-28_Pfalciparum3D7_Genome.fasta
 
 </details>
 
-## 15 Short keys
+## 15 Accessing a remote server
+
+ssh is the command used for accessing a remote server from your local computer.
+
+```
+ssh -p XXXX USERNAME@DOMAIN
+```
+
+**-p**: is the port through which connection is established (by default port number is 22)
+
+***man ssh for more information***
+
+
+## 16 Transfering data to/from remote server 
+
+according to the setting of the remote server you can use any of the 3 options
+
+- sftp
+  Connecting to the remote server and downloading the file
+  
+  ```
+   sftp -p XXXX USERNAME@DOMAIN
+   get Filename
+  
+  ```
+
+  Connecting to the remote server and uploading the file from your local computer
+  
+  ```
+   sftp -p XXXX USERNAME@DOMAIN
+   put Filename
+  
+  ```
+- ftp
+- rsync
+  Connecting to the remote server and downloading the file
+  
+  ```
+   rsync -avP  -e 'ssh -p <port-number>'  USERNAME@DOMAIN:/path/to/Filename .
+  
+  ```
+
+  Connecting to the remote server and uploading the file from your local computer
+  
+  ```
+  rsync -avP  -e 'ssh -p <port-number>' Filename USERNAME@DOMAIN:/path/to/
+
+  
+  ```
+
+
+
+## 17  Data manipulating 
+
+awk is a scripting language utility used for manipulating data and generating report by
+
+- (a) Scans a file line by line 
+- (b) Splits each input line into fields 
+- (c) Compares input line/fields to pattern 
+- (d) Performs action(s) on matched lines
+
+```
+awk '{print $1}' Data.txt
+
+```
+by default the awk splits the file by '\t' (tab) .This can be changed by using  -F parameter option
+
+***man awk for more information***
+
+
+## 18 Other UseFul Commands
+
+- cut
+  
+- sort
+  
+- uniq
+
+
+## 19 Short keys
 
 - double press tab: for autofill
   
@@ -774,14 +855,39 @@ grep -ic "AAAATGTTATATATATATATATATAT" PlasmoDB-28_Pfalciparum3D7_Genome.fasta
   
 - Use “|” pipe to make multiple commands
 
-## 16 Other UseFul Commands
 
-- awk
-  
-- sort
-  
-- uniq
+# Task - 9  :
 
+ Access the downloaded Homo_sapiens.GRCh38.84.gff3.gz file and find the number of unique chromosomes and number of lines associated with it
+    **Hint** : use awk, sort, uniq in conjuction with "|"
+
+<details>
+ 
+  <summary>Task 9 Answer</summary>
+  
+  ```
+  
+  awk '$1!~/^#/{print $1}' Data.txt |sort|uniq -c
+
+  ```
+</details>
+
+# Task - 10  :
+
+ Access the downloaded Homo_sapiens.GRCh38.84.gff3.gz file and find the number of genes per chromosomes.
+  **Hint** : use awk, sort, uniq in conjuction with "|" and consider 3rd column use '&'
+
+<details>
+ 
+  <summary>Task 10 Answer</summary>
+  
+```
+
+awk '($1!~/^#/) && ($3~/gene/) {print $1}' Data.txt |sort|uniq -c
+
+
+```
+</details>
 
 ---
 
